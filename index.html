@@ -511,7 +511,7 @@ ul, ol { list-style: none; }
 @media (max-width: 860px) { .pkg-side { position: static; } .collage { aspect-ratio: 1 / 1.3; } }
 @media (max-width: 700px) { .hero-art { margin-bottom: 70px; } #p4 .bst { top: auto !important; bottom: -8% !important; left: auto !important; right: 2% !important; --sz: 92px !important; } .vid-duo { gap: 10px; } }
 
-.trio .ph:nth-child(2) img { object-position: center; }
+.trio .ph:nth-child(2) img { object-position: 72% 60%; }
 .ph-in video { object-position: center; }
 .snd { position: absolute; z-index: 4; left: 50%; bottom: 12px; transform: translateX(-50%); border: 2px solid var(--cola); background: var(--lemon); color: var(--cola); border-radius: 99px; padding: 6px 11px; font: 500 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
 .stand-vids { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 2vw, 24px); max-width: 640px; margin: clamp(88px, 10vw, 130px) auto 0; position: relative; z-index: 2; }
@@ -562,6 +562,15 @@ button.pill { font: inherit; cursor: pointer; }
 .place-vid .ph { --rd: 12px; width: 100%; }
 .place-tag { position: absolute; z-index: 6; left: 50%; top: -14px; translate: -50% 0; white-space: nowrap; background: var(--lemon); color: var(--cola); border: 2px solid var(--cola); border-radius: 99px; padding: 5px 11px; font: 500 9px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
 @media (max-width: 860px) { .place-vid { right: -3%; width: 34%; bottom: 3%; } }
+
+.ev-head { max-width: 760px; }
+.ev-film { overflow: hidden; margin-top: clamp(36px, 5vw, 64px); padding-block: 14px 20px; }
+.ev-track { display: flex; gap: clamp(12px, 1.6vw, 22px); width: max-content; animation: mq 70s linear infinite; }
+.ev-film:hover .ev-track { animation-play-state: paused; }
+.ev-track .ph { width: clamp(190px, 24vw, 310px); --r: 3/4; --rd: 6px; flex: none; box-shadow: 0 0 0 5px var(--cotton), 5px 5px 0 5px var(--cola); }
+.ev-track .ph:nth-child(even) { margin-top: 30px; }
+.ev-cap { text-align: center; font: 500 10px/1.5 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); padding: 6px var(--gutter) 40px; }
+@media (prefers-reduced-motion: reduce) { .ev-track { animation: none; } .ev-film { overflow-x: auto; } }
 </style>
 
 <!-- Sprite de stickers -->
@@ -778,10 +787,10 @@ button.pill { font: inherit; cursor: pointer; }
       <p class="lead" data-r="up">El Principal exige aporte en dinero. Los Medianos y Aliados participan con dinero, productos o servicios, o una mezcla. Si quieres un stand, súmalo por $100.</p>
     </div>
     <div class="index" data-stagger>
-      <a class="idx-card tilt" href="#p1"><span class="stk k-cherry plain"><svg viewBox="0 0 100 100"><use href="#s-burst"/></svg></span><span class="no">01</span><h3>Patrocinante Principal</h3><p>Exclusivo. Aporte en dinero obligatorio.</p><b class="idx-price">$500</b></a>
-      <a class="idx-card tilt" href="#p2"><span class="stk k-hib plain"><svg viewBox="0 0 100 100"><use href="#s-heart"/></svg></span><span class="no">02</span><h3>Patrocinante Mediano</h3><p>Dinero, producto o mixto.</p><b class="idx-price">$300</b></a>
-      <a class="idx-card tilt" href="#p3"><span class="stk k-cherry plain"><svg viewBox="0 0 100 100"><use href="#s-cherry"/></svg></span><span class="no">03</span><h3>Pequeño / Aliado</h3><p>Muestras, rifas o dinero.</p><b class="idx-price">$200</b></a>
-      <a class="idx-card tilt" href="#p4"><span class="stk k-lemon plain"><svg viewBox="0 0 100 100"><use href="#s-lemon"/></svg></span><span class="no">04</span><h3>Stand Exclusivo</h3><p>Solo espacio, sin patrocinio.</p><b class="idx-price">$200</b></a>
+      <a class="idx-card tilt" href="#p1"><span class="stk k-cherry plain"><svg viewBox="0 0 100 100"><use href="#s-burst"/></svg></span><span class="no">01</span><h3>Patrocinante Principal</h3><p>Exclusivo. Aporte en dinero obligatorio.</p><b class="idx-price">$300</b></a>
+      <a class="idx-card tilt" href="#p2"><span class="stk k-hib plain"><svg viewBox="0 0 100 100"><use href="#s-heart"/></svg></span><span class="no">02</span><h3>Patrocinante Mediano</h3><p>Dinero, producto o mixto.</p><b class="idx-price">$200</b></a>
+      <a class="idx-card tilt" href="#p3"><span class="stk k-cherry plain"><svg viewBox="0 0 100 100"><use href="#s-cherry"/></svg></span><span class="no">03</span><h3>Pequeño / Aliado</h3><p>Muestras, rifas o dinero.</p><b class="idx-price">$100</b></a>
+      <a class="idx-card tilt" href="#p4"><span class="stk k-lemon plain"><svg viewBox="0 0 100 100"><use href="#s-lemon"/></svg></span><span class="no">04</span><h3>Stand Exclusivo</h3><p>Solo espacio, sin patrocinio.</p><b class="idx-price">$100</b></a>
     </div>
   </div>
 </section>
@@ -793,7 +802,7 @@ button.pill { font: inherit; cursor: pointer; }
       <span class="big-no" aria-hidden="true">01</span>
       <span class="tag" style="align-self:flex-start">Exclusivo · Mayor inversión</span>
       <h2 class="h2">Patrocinante <em>Principal</em></h2>
-      <span class="price"><small>Inversión</small>$500</span>
+      <span class="price"><small>Inversión</small>$300</span>
       <p class="lead">La marca que se adueña de la experiencia junto a nosotras, asegura exclusividad en su rubro y obtiene el máximo retorno mediático y comercial.</p>
       <p class="req"><b>Requisito</b>Aporte económico obligatorio. Puede ser 100% en dinero o un esquema mixto donde la parte principal sea en efectivo.</p>
       <div class="vid">
@@ -837,7 +846,7 @@ button.pill { font: inherit; cursor: pointer; }
       <span class="big-no" aria-hidden="true" style="-webkit-text-stroke-color:var(--cherry);margin-bottom:0">02</span>
       <span class="tag">Sponsor destacado</span>
       <h2 class="h2">Patrocinante <em>Mediano</em></h2>
-      <span class="price pr-dark"><small>Inversión</small>$300</span>
+      <span class="price pr-dark"><small>Inversión</small>$200</span>
       <p class="lead">Para marcas consolidadas que quieren presencia relevante y conexión directa con la audiencia, sin asumir la titularidad del evento. Participas con dinero, producto o servicio, o una combinación.</p>
       <div class="cards" data-stagger style="width:100%">
         <div class="card"><svg class="gl" viewBox="0 0 100 100"><use href="#s-spark"/></svg><h3>Reel colaborativo</h3><p>Presencia en el reel de “Marcas oficiales que hacen posible la experiencia”.</p></div>
@@ -860,14 +869,14 @@ button.pill { font: inherit; cursor: pointer; }
     <div class="p3-head">
       <span class="eyebrow" data-r="up">03 · Sponsor aliado</span>
       <h2 class="h2" data-r="up">Patrocinante <em>Pequeño</em> y Aliado</h2>
-      <span class="price pr-dark" data-r="up"><small>Inversión</small>$200</span>
+      <span class="price pr-dark" data-r="up"><small>Inversión</small>$100</span>
       <p class="price-note" data-r="up">+ $100 si quieres stand</p>
       <p class="lead" data-r="up">Para emprendimientos y marcas aliadas que buscan visibilidad, probar su producto con la audiencia y hablar directo con la comunidad. Participas con dinero, producto o servicio, o una mezcla.</p>
     </div>
     <div class="trio-wrap">
       <div class="trio" data-stagger>
         <div class="ph" data-label="FOTO · Muestras" data-src="img/ethique.jpg"><div class="ph-in"></div></div>
-        <div class="ph" data-label="FOTO · Goodie bag" data-src="img/kitbag.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Goodie bag" data-src="img/goodie.jpg"><div class="ph-in"></div></div>
         <div class="ph" data-label="FOTO · Experiencia" data-src="img/mats.jpg"><div class="ph-in"></div></div>
       </div>
       <span class="stk k-lemon" style="left:-3%;top:-9%;--sz:clamp(56px,8vw,96px)" data-speed="-30"><svg class="a-float" viewBox="0 0 100 100"><use href="#s-smile"/></svg></span>
@@ -900,7 +909,7 @@ button.pill { font: inherit; cursor: pointer; }
       <div class="ph stand-main" data-label="FOTO · Stand o zona de experiencias" data-src="img/cart.jpg" data-r="up"><div class="ph-in"></div></div>
             <div class="stand-card" data-r="rise">
         <p class="lead" style="max-width:none">Para marcas que no entran en un paquete de patrocinio pero quieren un espacio para vender, dar a probar o conversar con las asistentes.</p>
-        <span class="price"><small>Pago único</small>$200</span>
+        <span class="price"><small>Pago único</small>$100</span>
         <ul>
           <li><svg viewBox="0 0 100 100"><use href="#s-spark"/></svg><span><b>Espacio asignado</b>Área delimitada para tu mesa, exhibidor, punto de venta o atención.</span></li>
           <li><svg viewBox="0 0 100 100"><use href="#s-spark"/></svg><span><b>Captación directa</b>Exposición a toda la audiencia y permiso para entregar muestras de producto.</span></li>
@@ -941,13 +950,13 @@ button.pill { font: inherit; cursor: pointer; }
           </tr>
         </thead>
         <tbody>
-          <tr><th>Aporte</th><td>$500 · dinero obligatorio</td><td>$300 · dinero, producto o mixto</td><td>$200 · dinero, producto o mixto</td><td>Pago único de $200</td></tr>
+          <tr><th>Aporte</th><td>$300 · dinero obligatorio</td><td>$200 · dinero, producto o mixto</td><td>$100 · dinero, producto o mixto</td><td>Pago único de $100</td></tr>
           <tr><th>Reel exclusivo</th><td class="yes">✓ Con María y Emily</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
           <tr><th>Exclusividad de categoría</th><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
           <tr><th>Naming del evento</th><td class="yes">✓ “Presentado por”</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
           <tr><th>Logo</th><td>Backdrop de honor y pantalla principal</td><td>Backdrop y pantallas</td><td>Lámina de aliados</td><td>Pantalla de la zona</td></tr>
           <tr><th>Carrusel de fotos de patrocinantes</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
-          <tr><th>Stand</th><td class="yes">Incluido, ubicación VIP</td><td>Opcional, $200</td><td>Opcional, $200</td><td class="yes">Es el paquete</td></tr>
+          <tr><th>Stand</th><td class="yes">Incluido, ubicación VIP</td><td>Opcional, $100</td><td>Opcional, $100</td><td class="yes">Es el paquete</td></tr>
           <tr><th>Mención en vivo</th><td>Apertura y cierre</td><td>Bloque de destacados</td><td>Al entregar un premio de rifa</td><td>Invitación a visitar la zona</td></tr>
           <tr><th>Goodie bag</th><td>Posición prioritaria</td><td>Producto</td><td>Muestra, o producto de rifa</td><td class="no">—</td></tr>
           <tr><th>Pases de cortesía</th><td class="yes">4 VIP</td><td>2</td><td>2</td><td class="no">—</td></tr>
@@ -1045,6 +1054,43 @@ button.pill { font: inherit; cursor: pointer; }
       <div class="cond"><b>Respeto a la experiencia</b><p>Cobertura fluida y orgánica, sin interferir en la práctica de pilates de las asistentes.</p></div>
     </div>
   </div>
+</section>
+
+<!-- ═══ 11b · CÓMO SE VERÁ EL EVENTO ═══════════════════════════ -->
+<section class="tab sec-light" id="evento">
+  <div class="wrap">
+    <div class="stack ev-head" style="position:relative">
+      <span class="eyebrow" data-r="up">8 de noviembre · Marea Club de Playa</span>
+      <h2 class="h2" data-r="up">Así se verá <em>el evento</em></h2>
+      <p class="lead" data-r="up">Una tarde en rosa, vino y cereza: mats alineadas frente al mar, flores frescas, goodie bags, rincones de marca y mujeres moviéndose juntas. Estas imágenes son referencias del ambiente que estamos construyendo, para que imagines dónde vivirá tu marca.</p>
+      <span class="stk k-hib" style="right:2%;top:-10%;--sz:clamp(50px,7vw,88px)" data-speed="-30"><svg class="a-spin" style="--dur:26s" viewBox="0 0 100 100"><use href="#s-daisy"/></svg></span>
+    </div>
+  </div>
+  <div class="ev-film" aria-label="Carrusel de referencias del ambiente del evento">
+    <div class="ev-track">
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev1.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev2.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev3.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev4.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev5.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev6.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev7.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev8.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev9.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev10.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev1.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev2.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev3.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev4.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev5.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev6.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev7.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev8.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev9.jpg"><div class="ph-in"></div></div>
+        <div class="ph" data-label="FOTO · Ambiente" data-src="img/ev10.jpg"><div class="ph-in"></div></div>
+    </div>
+  </div>
+  <p class="ev-cap">Referencias visuales del ambiente</p>
 </section>
 
 <!-- ═══ 12 · CIERRE ════════════════════════════════════════════ -->
